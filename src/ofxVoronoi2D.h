@@ -198,7 +198,7 @@ class ofxVoronoi2D {
       // Note: 1st index = voronoi cell center
       voro.resetIterator();
       while(voro.getNext(p[0], p[1], s[0], s[1], sites)){
-        std::cout << ". graph edge (" << sites << " sites)\n";
+        //std::cout << ". graph edge (" << sites << " sites)\n";
         Index i = mesh.getVertices().size();
         // std::cout << "idx " << mesh.getIndices().size();
         // std::cout << ", vtx " << mesh.getVertices().size() << "\n";
@@ -206,7 +206,7 @@ class ofxVoronoi2D {
         mesh.addVertex(ofVec3f(p[1]));
         // std::cout << "e0 " << p[0] << ", e1 " << p[1] << "\n";
         for(int j = 0; j < sites; ++j){
-          std::cout << "s" << j << " " << s[j] << "\n";
+          //std::cout << "s" << j << " " << s[j] << "\n";
           mesh.addVertex(ofVec3f(s[j]));
           mesh.addTriangle(i + 2 + j, i, i + 1);
 
